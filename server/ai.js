@@ -23,18 +23,23 @@ function loadAuth() {
   throw new Error("No se pudo leer auth.json de opencode")
 }
 
-export const auth = loadAuth()
+let cachedAuth = null
+
+export function getAuth() {
+  if (!cachedAuth) cachedAuth = loadAuth()
+  return cachedAuth
+}
 
 export const GATEWAYS = {
   opencode: {
     label: "OpenCode Zen",
     baseURL: "https://opencode.ai/zen/v1",
-    key: () => auth.opencode?.key,
+    key: () => getAuth().opencode?.key,
   },
   "opencode-go": {
     label: "OpenCode Go",
     baseURL: "https://opencode.ai/zen/go/v1",
-    key: () => auth["opencode-go"]?.key,
+    key: () => getAuth()["opencode-go"]?.key,
   },
 }
 
