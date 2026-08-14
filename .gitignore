@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Builds
+client/dist/
+
+# Datos locales (diseños guardados, claves, logs)
+server/data/
+server/server.log
+server/.server.pid
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
