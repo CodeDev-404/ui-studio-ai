@@ -5,6 +5,10 @@ App web que **genera diseños UI desde un prompt** usando la API de opencode
 **canvas editable tipo Figma**, editor de código, diseños guardados y
 **enlaces públicos** para compartir. Totalmente responsive (móvil/tablet/escritorio).
 
+## 🌐 Demo
+
+**https://codedev-404.github.io/ui-studio-ai/**
+
 ## ✨ Características
 
 - 🤖 **Generación con IA**: escribe un prompt (ej. *"landing de una app de fitness, modo oscuro"*) y la IA genera el HTML completo en streaming, viéndolo renderizarse en vivo.
